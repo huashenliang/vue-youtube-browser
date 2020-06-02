@@ -20,7 +20,6 @@
         align="center"
         style="max-width: 700px"
       >
-   
         <v-text-field
           :append-icon-cb="() => {}"
           placeholder="Search Your Video Here..."
@@ -32,9 +31,8 @@
         >  </v-text-field>
       </v-row>
     </v-app-bar>
- 
 
-    <v-content>
+    <v-content style="paddingLeft: 15%; paddingRight:15%;paddingTop: 5%">
       <v-row >
         <VideoDetail :video="selectedVideo" />
         <v-col>
@@ -51,7 +49,7 @@ import VideoList from './components/VideoList';
 import VideoDetail from './components/VideoDetail'; 
 
 
-const API_KEY = 'Your Key here';
+const API_KEY = 'API KEY here';
 
 
   export default {
@@ -79,8 +77,9 @@ const API_KEY = 'Your Key here';
             q: searchTerm
           }
         }).then(res => {
+          console.log(res)
             this.videos = res.data.items;
-        })
+        }).catch(err => console.log(err))
     },
     onVideoSelect(video){
       console.log(video)
@@ -89,3 +88,4 @@ const API_KEY = 'Your Key here';
   }
   }
 </script>
+
