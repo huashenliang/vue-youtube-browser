@@ -5,6 +5,7 @@
         </div>
         <div class="details"> 
             <h4> {{video.snippet.title}}</h4>
+            <h6> Channel: {{video.snippet.channelTitle}} | Published: {{video.snippet.publishTime}} </h6>
             <p>{{video.snippet.description}} </p>
         </div >
     </div>

@@ -28,10 +28,11 @@
     li {
         display: flex;
         cursor: pointer;
+        background-color: #343a40;
     }
 
     li:hover {
-        background-color:#eee;
+        background-color:#6c757d;
     }
 
 </style>
